@@ -81,10 +81,10 @@ int main(void)
 	}//for
 
 	/*清空allset描述符集*/
-	FD_ZERO(&allset);
+	FD_ZERO(&allset);     /*将allset清零使集合中不含任何fd*/
 
 	/*将监听描述符加到allset中*/
-	FD_SET(listenfd , &allset);
+	FD_SET(listenfd , &allset);  /*将listenfd加入allset集合*/
 
 	/*(6) 接收客户链接*/
 	while(1)
